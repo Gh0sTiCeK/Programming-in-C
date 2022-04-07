@@ -43,6 +43,7 @@ int main(){
 // /= |	Divide AND assignment operator. It divides the left operand with the right operand and assigns the result to the left operand.	     | C /= A -> C = C / A  |
 // %= |	Modulus AND assignment operator. It takes modulus using two operands and assigns the result to the left operand.	                 | C %= A -> C = C % A  |
 //----+--------------------------------------------------------------------------------------------------------------------------------------+----------------------+
+tables from: https://www.tutorialspoint.com/cprogramming/c_operators.htm
 
 int a = 5;
 int b = 3;
