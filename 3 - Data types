@@ -19,6 +19,7 @@ int main(){
 //| double                  | 8        |                                   | %lf                |
 //| long double             | 16       |                                   | %Lf                |
 //+-------------------------+----------+-----------------------------------+--------------------+
+Table from: https://www.geeksforgeeks.org/data-types-in-c/
 
 	int a = 5;
 	float b = 3.25;
