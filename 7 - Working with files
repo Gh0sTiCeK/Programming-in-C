@@ -14,10 +14,28 @@ end of file.
 int main(){
 	FILE *f;
 	char c;
-	f = fopen("TCIP.TXT","r");
+	f = fopen("FILE_NAME.TXT","r");
 	
-	while((c=getc(f)) != EOF){
+	while((c=fgetc(f)) != EOF){
 		printf("%c",c);
+	}
+	fclose(f);
+	return 0;
+}
+/*
+Writing to files is very similar, in fact the biggest difference in
+basics is to make sure that we open file with "w" instead of "r":
+f = fopen("FILE_NAME.TXT","w");
+*/
+#include <stdio.h>
+
+int main(){
+	FILE *f;
+	char c;
+	f = fopen("FILE_NAME.TXT","w");
+	
+	while((c=getchar()) != '\n'){
+		fprintf(f,"%c",c);
 	}
 	fclose(f);
 	return 0;
