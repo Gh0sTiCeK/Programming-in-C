@@ -1,0 +1,24 @@
+/*
+If order to read from file, we need to create that file first. 
+Then we need a pointer to file. Syntax for opening file for
+reading is: f = fopen("FILE_NAME.TXT","r");
+To close file: fclose(f);
+We can use WHILE cycle to read characters from file and then
+print them to concole. To stop reading characters a.k.a to break
+the cycle, we need to make sure that in condition of cycle we use
+EOF - End Of File. So it will be reading characters until the very 
+end of file.
+*/
+#include <stdio.h>
+
+int main(){
+	FILE *f;
+	char c;
+	f = fopen("TCIP.TXT","r");
+	
+	while((c=getc(f)) != EOF){
+		printf("%c",c);
+	}
+	fclose(f);
+	return 0;
+}
