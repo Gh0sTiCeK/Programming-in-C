@@ -1,0 +1,22 @@
+/*
+It's very important to say right from the beginning that goto
+is not recomended to use. It's because it is not easy to follow
+in code and it can get buggy. You should use it only when you
+feel like it would be better, but keep in mind that every code
+can be coded without using goto. Following code is very badly
+written because you can swap goto with simple for loop, but i
+chose to do it this way because is very easy to understand.
+*/
+#include <stdio.h>
+
+int main(){
+	int i = 0;
+	
+	repeat:
+		i++;
+		printf("%d\n",i);
+		if(i < 10){
+			goto repeat;
+		}
+	return 0;
+}
