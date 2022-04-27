@@ -1,0 +1,43 @@
+/*
+In C there are 3 cycles: for, while, do-while
+*/
+#include <stdio.h>
+
+int main(){
+	int i=0, j=0, k=0;
+	
+	/*
+	Cycle FOR is used in case that we know the number of times
+	that the loop will be iterated. The syntax for cycle FOR is:
+	for(assignment; comparison; incrementation){ }
+	The example code will print numbers from 0 to 10.
+	*/
+	for(i=0; i<=10; i++){
+		printf("%d ",i);
+	}
+	/*
+	Cycle WHILE is used in case that we do not know the number of times
+	that the loop will be iterated. While cycle will firstly check the
+	condition and if it's true then it will run the code inside of the
+	loop. The syntax for cycle WHILE is:
+	while(condition){ }
+	The example code will print numbers from 0 to 10.
+	*/
+	while(j<=10){
+		printf("%d ",j);
+		j++;
+	}
+	/*
+	Cycle DO-WHILE is very similar to cycle While, the only difference is 
+	that cycle will firstly run the code inside the loop and then it will 
+	check the condition. So in this loop it's guaranteed that the code inside
+	of the loop will be executed atleast once. The syntax for cycle DO-WHILE is:
+	do{ }while(condition);
+	The example code will print numbers from 0 to 10.
+	*/
+	do{
+		printf("%d ",k);
+		k++;
+	}while(k<=10);
+	return 0;
+}
