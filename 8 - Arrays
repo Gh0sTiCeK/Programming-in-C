@@ -1,0 +1,65 @@
+/*
+Arrays a kind of data structure that can store a fixed-size sequential collection of elements of 
+the same type. An array is used to store a collection of data, but it is often more useful to think 
+of an array as a collection of variables of the same type. Instead of declaring individual variables, 
+such as number0, number1, ..., and number99, you declare one array variable such as numbers and use 
+numbers[0], numbers[1], and ..., numbers[99] to represent individual variables. A specific element in 
+an array is accessed by an index. All arrays consist of contiguous memory locations. The lowest address 
+corresponds to the first element and the highest address to the last element.
+To inicialize array we need data type and some name. The inicialization can be something like this:
+1. int array[] = {2,7,5,12,3}; - define all the values
+2. int array[5]; - define the lenght of array
+We need to consider that arrays are zero based so the index of first value (2) is array[0].
+*/
+#include <stdio.h>
+
+int main(){
+	int i;
+	int j;
+	int array[] = {2,7,5,12,3};
+	int arrLenght = sizeof(array) / sizeof(array[0]);
+	
+	//display array
+	for(i=0; i<arrLenght; i++){
+		printf("%d ",array[i]);
+	}
+}
+
+/*
+There is also way to replace some item of array, but we need to consider that arrays are zero based.
+So with the command: array[2] = 6; the item 5 will be replaced for 6 -> {2,7,6,12,3}
+
+We can also delete item from array but in that case we must subtract equal amount from lenght to the amount of 
+numbers we were removing and shift other values back. Example: {2,7,6,12,3} -> lets say that we need to remove 
+value 7 from this array, we need to move values 6, 12 and 3 one back. 
+*/
+
+#include <stdio.h>
+
+int main(){
+	int i;
+	int j;
+	int k;
+	int array[] = {2,7,5,12,3};
+	int arrLenght = sizeof(array) / sizeof(array[0]);
+	
+	//display array
+	for(i=0; i<arrLenght; i++){
+		printf("%d ",array[i]);
+	}
+	
+	printf("\n");
+	//remove value 7 from array
+	array[1] = 0;
+	for(j=0; j<arrLenght; j++){
+		if(j>0){
+			array[j] = array[j+1];
+		}
+	}
+	
+	//shorten lenght of array and display array
+	arrLenght = 4;
+	for(k=0; k<arrLenght; k++){
+		printf("%d ",array[k]);
+	}
+}
